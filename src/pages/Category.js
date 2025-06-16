@@ -15,14 +15,6 @@ const Category = () => {
     return a.name.localeCompare(b.name);
   });
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(price);
-  };
 
   const getResponsiveImage = (product, size = 'desktop') => {
     return product.categoryImage[size] || product.image[size];
@@ -48,6 +40,7 @@ const Category = () => {
           {categoryProducts.map((product, index) => (
             <div 
               key={product.id} 
+              className={`product-details-grid ${index % 2 === 1 ? 'reverse-layout' : ''}`}
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -56,7 +49,6 @@ const Category = () => {
                 marginBottom: index < categoryProducts.length - 1 ? '10rem' : '0',
                 flexDirection: index % 2 === 1 ? 'row-reverse' : 'row'
               }}
-              className={index % 2 === 1 ? 'reverse-layout' : ''}
             >
               <div style={{ order: index % 2 === 1 ? 2 : 1 }}>
                 <img 
@@ -109,7 +101,7 @@ const Category = () => {
         <div className="container">
           <div className="grid grid-3">
             <Link to="/category/headphones" className="category-card">
-              <img src="/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" />
+              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" />
               <h3>Headphones</h3>
               <span className="btn">
                 Shop
@@ -120,7 +112,7 @@ const Category = () => {
             </Link>
             
             <Link to="/category/speakers" className="category-card">
-              <img src="/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" />
+              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" />
               <h3>Speakers</h3>
               <span className="btn">
                 Shop
@@ -131,7 +123,7 @@ const Category = () => {
             </Link>
             
             <Link to="/category/earphones" className="category-card">
-              <img src="/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" />
+              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" />
               <h3>Earphones</h3>
               <span className="btn">
                 Shop
@@ -147,7 +139,7 @@ const Category = () => {
       {/* Best Gear Section */}
       <section className="section-spacing">
         <div className="container">
-          <div style={{
+          <div className="best-gear-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             alignItems: 'center',
@@ -167,7 +159,7 @@ const Category = () => {
             </div>
             <div>
               <img 
-                src="/assets/shared/desktop/image-best-gear.jpg" 
+                src="../audio_file/assets/shared/desktop/image-best-gear.jpg" 
                 alt="Best Gear"
                 style={{ 
                   width: '100%', 

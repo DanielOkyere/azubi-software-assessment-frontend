@@ -66,7 +66,7 @@ const Product = () => {
       {/* Product Details */}
       <section style={{ padding: '0 0 120px' }}>
         <div className="container">
-          <div style={{
+          <div className="product-details-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             alignItems: 'center',
@@ -179,7 +179,7 @@ const Product = () => {
           </div>
 
           {/* Features and In the Box */}
-          <div style={{
+          <div className="features-grid" style={{
             display: 'grid',
             gridTemplateColumns: '2fr 1fr',
             gap: '8rem',
@@ -219,13 +219,13 @@ const Product = () => {
           </div>
 
           {/* Gallery */}
-          <div style={{
+          <div className="gallery-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: '2rem',
             marginBottom: '10rem'
           }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div className="gallery-left" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <img 
                 src={product.gallery.first.desktop}
                 alt={`${product.name} gallery 1`}
@@ -334,7 +334,7 @@ const Product = () => {
       {/* Best Gear Section */}
       <section className="section-spacing">
         <div className="container">
-          <div style={{
+          <div className="best-gear-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             alignItems: 'center',

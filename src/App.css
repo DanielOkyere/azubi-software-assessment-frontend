@@ -421,21 +421,105 @@ main {
                       url('../audio_file/assets/home/mobile/image-header.jpg');
     min-height: 70vh;
     text-align: center;
+    padding: 0 1rem;
   }
   
   .hero-content {
     padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  /* Mobile layout fixes */
+  .mobile-nav .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .mobile-nav .category-card {
+    padding: 88px 2rem 22px;
+    margin-bottom: 68px;
+  }
+  
+  .mobile-nav .category-card img {
+    width: 80px;
+    top: -40px;
+  }
+  
+  /* Product layout mobile fixes */
+  .product-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .gallery-grid .gallery-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Featured products mobile */
+  .featured-zx9 {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    padding: 3rem 1.5rem !important;
+    gap: 2rem !important;
+  }
+  
+  .featured-zx7 {
+    padding: 6rem 1.5rem !important;
+    background-image: url('../audio_file/assets/home/mobile/image-speaker-zx7.jpg') !important;
+  }
+  
+  .featured-yx1 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .featured-yx1 > div:first-child {
+    background-image: url('../audio_file/assets/home/mobile/image-earphones-yx1.jpg') !important;
+  }
+  
+  .best-gear-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+  
+  .best-gear-grid > div:first-child {
+    order: 2;
+  }
+  
+  .best-gear-grid > div:last-child {
+    order: 1;
   }
   
   .footer-info {
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
+    text-align: center;
   }
   
   .footer-nav {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+    width: 100%;
   }
   
   .cart-overlay {
@@ -447,11 +531,54 @@ main {
     width: 100%;
     max-width: none;
   }
+  
+  /* Checkout mobile */
+  .checkout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .billing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .shipping-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .payment-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                       url('../audio_file/assets/home/tablet/image-header.jpg');
+  }
+  
+  .featured-zx7 {
+    background-image: url('../audio_file/assets/home/tablet/image-speaker-zx7.jpg');
+  }
+  
+  .featured-yx1 > div:first-child {
+    background-image: url('../audio_file/assets/home/tablet/image-earphones-yx1.jpg');
+  }
+  
+  .featured-zx9 {
+    padding: 120px 60px;
+    gap: 4rem;
+  }
+  
+  .product-details-grid {
+    gap: 4rem !important;
+  }
+  
+  .features-grid {
+    gap: 4rem !important;
+  }
+  
+  .best-gear-grid {
+    gap: 4rem !important;
   }
 } 

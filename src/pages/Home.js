@@ -3,21 +3,7 @@ import { Link } from 'react-router-dom';
 import { productsData } from '../App';
 
 const Home = () => {
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(price);
-  };
-
-  // Get the featured products
-  const featuredProduct = productsData.find(p => p.slug === 'xx99-mark-two-headphones');
-  const zx9Speaker = productsData.find(p => p.slug === 'zx9-speaker');
-  const zx7Speaker = productsData.find(p => p.slug === 'zx7-speaker');
-  const yx1Earphones = productsData.find(p => p.slug === 'yx1-earphones');
-
+  
   return (
     <div>
       {/* Hero Section */}
@@ -88,7 +74,7 @@ const Home = () => {
       <section className="section-spacing">
         <div className="container">
           {/* ZX9 Speaker */}
-          <div style={{
+          <div className="featured-zx9" style={{
             backgroundColor: '#D87D4A',
             borderRadius: '8px',
             padding: '120px 95px',
@@ -127,7 +113,7 @@ const Home = () => {
           </div>
 
           {/* ZX7 Speaker */}
-          <div style={{
+          <div className="featured-zx7" style={{
             backgroundImage: 'url(/assets/home/desktop/image-speaker-zx7.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -144,7 +130,7 @@ const Home = () => {
           </div>
 
           {/* YX1 Earphones */}
-          <div style={{
+          <div className="featured-yx1" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: '2rem'
@@ -177,7 +163,7 @@ const Home = () => {
       {/* Best Gear Section */}
       <section className="section-spacing">
         <div className="container">
-          <div style={{
+          <div className="best-gear-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             alignItems: 'center',

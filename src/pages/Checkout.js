@@ -75,8 +75,8 @@ const Checkout = () => {
       newErrors.email = 'Email format is invalid';
     }
 
-    // Phone validation (basic)
-    if (formData.phone && !/^\+?[\d\s\-\(\)]+$/.test(formData.phone)) {
+    // Phone validation (basic)  
+    if (formData.phone && !/^\+?[\d\s\-()]+$/.test(formData.phone)) {
       newErrors.phone = 'Phone number format is invalid';
     }
 
@@ -151,7 +151,7 @@ const Checkout = () => {
           Go Back
         </button>
 
-        <div style={{
+        <div className="checkout-grid" style={{
           display: 'grid',
           gridTemplateColumns: '2fr 1fr',
           gap: '2rem',
@@ -177,7 +177,7 @@ const Checkout = () => {
                   Billing Details
                 </h3>
                 
-                <div style={{
+                <div className="billing-grid" style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
                   gap: '1rem'
@@ -267,7 +267,7 @@ const Checkout = () => {
                   />
                 </div>
                 
-                <div style={{
+                <div className="shipping-grid" style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
                   gap: '1rem',
@@ -340,7 +340,7 @@ const Checkout = () => {
                   Payment Details
                 </h3>
                 
-                <div style={{
+                <div className="payment-grid" style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
                   gap: '1rem',
