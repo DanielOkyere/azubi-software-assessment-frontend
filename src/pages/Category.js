@@ -101,7 +101,7 @@ const Category = () => {
         <div className="container">
           <div className="grid grid-3">
             <Link to="/category/headphones" className="category-card">
-              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" />
+              <img src="/assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" />
               <h3>Headphones</h3>
               <span className="btn">
                 Shop
@@ -112,7 +112,7 @@ const Category = () => {
             </Link>
             
             <Link to="/category/speakers" className="category-card">
-              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" />
+              <img src="/assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" />
               <h3>Speakers</h3>
               <span className="btn">
                 Shop
@@ -123,7 +123,7 @@ const Category = () => {
             </Link>
             
             <Link to="/category/earphones" className="category-card">
-              <img src="../audio_file/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" />
+              <img src="/assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" />
               <h3>Earphones</h3>
               <span className="btn">
                 Shop
@@ -159,7 +159,7 @@ const Category = () => {
             </div>
             <div>
               <img 
-                src="../audio_file/assets/shared/desktop/image-best-gear.jpg" 
+                src="/assets/shared/desktop/image-best-gear.jpg" 
                 alt="Best Gear"
                 style={{ 
                   width: '100%', 
